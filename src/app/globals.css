@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Global............................................................... */
+
+.my-container {
+  @apply w-full max-w-[540px] md:max-w-full mx-auto p-2 sm:p-3 md:p-4 px-2 sm:px-3 md:px-4 lg:px-10 xl:px-14 2xl:px-24;
+}
+
+.my-row {
+  @apply flex flex-wrap items-center w-full;
+}
+
+.my-col {
+  @apply p-3 w-full;
+}
+
+.my-col-2 {
+  @apply p-3 w-full md:w-1/2;
+}
+
+.my-col-4 {
+  @apply p-3 w-full md:w-1/2 lg:w-1/4;
+}
+
+
+
+
+/* Header.................................................................  */
+.header-nav-list {
+  @apply p-2 text-primary hover:bg-primary hover:text-white rounded-md text-[14px] font-semibold uppercase;
+}
+
+.header-nav-list-mobile {
+  @apply text-primary text-[14px] font-semibold uppercase border-b py-2;
+}
+
+
+.header-service-inner-pages {
+  display: block;
+  background-color: var(--text_white);
+  position: absolute;
+  /* left: 0; */
+  /* padding: 20px; */
+  /* width: 320px; */
+  transition: all .2s;
+  transform: scaleY(0);
+  /* transform: scale(1); */
+  opacity: 1;
+  transform-origin: top;
+  border-top:3px solid #203993;
+  border-radius: 0 5px 5px 5px;
+  box-shadow: 6px 6px 8px 0 #00000023;
+  top: 70%;
+  background-color: #edf0ef;
+  min-width: 200px;
+
+}
+
+.header-nav-list-service:hover .header-service-inner-pages {
+  transform: scale(1);
+  opacity: 1;
+  background-color: #fff;
+}
+
+.header-nav-list-inner{
+@apply text-[#777] text-[14px] font-poppins font-normal capitalize border-b-[1px] py-[9px] px-4 tracking-tight
+}
+.active-nav-tab{
+  @apply bg-primary text-white
+}
